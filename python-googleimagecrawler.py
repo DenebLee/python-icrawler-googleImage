@@ -9,7 +9,11 @@ b = int(input("다운받을 이미지 갯수 입력 : "))
 dir_path = "./img"
 dir_name = a
 
-save_dir = os.path.join('./img')
+save_dir = os.path.join('./img') # 다운받을 이미지 폴더 
+os.makedirs(dir_path + '/' + dir_name) #다운 받은 이미지 저장할 폴더 생성
+dst = f"{dir_path}/{dir_name}"   
+print(f"> {dir_path}/{dir_name} 생성")
+save_dir = os.path.join(dst)
 filters = {
     'size': 'large',
     'license': 'noncommercial,modify', # 비상업용도, 수정 가능
